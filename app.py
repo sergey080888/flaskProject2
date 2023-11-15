@@ -17,13 +17,6 @@ collection = db['forms']
 
 @app.route('/get_form', methods=['POST'])
 def get_form_handler():
-    # form = {
-    #     "name": "Form template name",
-    #     "field_1": "email",
-    #     "field_2": "phone",
-    # }
-    # insert_result = collection.insert_one(form)
-
     args = dict(request.args)
 
     pattern = re.compile('.')
